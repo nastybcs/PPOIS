@@ -1,4 +1,5 @@
-from Dict import Dictionary, Node
+from Dict import Dictionary
+from node import Node
 d=Dictionary()
 
 while True:
