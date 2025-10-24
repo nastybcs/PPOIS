@@ -1,0 +1,47 @@
+Person 3 0
+Major 3 6 -> Course, Student, Teacher
+AcademyLevel 1 0
+Group 7 7 -> Major, Student, AttendanceTracker
+Subgroup 4 1 -> Group, Student
+Department 2 2 -> Teacher, Course
+Teacher 5 1 -> Person, Department, ResearchLab
+Course 4 3 -> Teacher, Student
+Attendance 3 1 -> Student, ScheduleEntry
+AttendanceTracker 2 3 -> Group, Attendance
+StudentGrades 3 7 -> Student, Grade, ExamGrade, CreditGrade, Session
+StudentDebts 2 1 -> Student, Course
+StudentAttendance 2 1 -> Student
+StudentScholarship 3 2 -> Student, ScholarshipRecord, Session
+Student 9 9 -> Person, Group, Major, StudentGrades, StudentDebts, StudentScholarship, StudentAttendance, Document, ResearchLab
+Grade 2 0 -> Course
+Dean 5 0 -> Person, Faculty
+Faculty 6 5 -> Group, Major, Teacher, Dean
+Leader 1 3 -> Student
+DocumentSecretary 4 2 -> Person, Faculty, Document
+EventSecretary 4 5 -> Person, Faculty, Event
+Document 3 2 -> Student
+Event 6 5 -> Location, Group, Student
+Room 3 0 -> Building
+Building 3 3 -> Campus, Room
+Campus 3 3 -> Building
+Location 3 2 -> Campus, Building, Room
+CapacityCalculator 0 1 -> ActivityType, Group, Subgroup
+ConflictChecker 0 1 -> ScheduleEntry, Location
+Schedule 1 4 -> Location, Teacher, Course, Group, Subgroup
+Semester 3 2 -> Schedule
+ExamGrade 3 0 -> Course
+Exam 4 1 -> Course, Location, Teacher, Student
+Credit 5 1 -> Course, Location, Teacher, Student
+Session 5 5 -> Group, Semester, Exam, Credit, Course, Student
+CreditGrade 3 0 -> Course
+Book 4 2 -> Student
+Publication 6 1 -> Teacher/Student, PublicationType
+Library 2 6 -> Book
+Thesis 5 2 -> Student, Teacher
+ThesisArchive 1 4 -> Thesis
+CourseProject 6 4 -> Student, Teacher, Grade
+ResearchLab 4 3 -> Teacher, Student, CourseProject
+ScientificConference 4 4 -> Teacher/Student, Publication
+
+Поля: 167 Поведения: 105
+Ассоциации: 73
