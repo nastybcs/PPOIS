@@ -1,4 +1,4 @@
-# University Management System - Data Model Overview
+# Dean's Office
 
 ## Entities, Fields, Behaviors, Associations
 
