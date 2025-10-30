@@ -11,7 +11,7 @@ CreditGrade 3 0 -> Course
 Department 4 2 -> Teacher, Course  
 ExamGrade 3 0 -> Course  
 Faculty 6 5 -> Group, Major, Teacher, Dean  
-Grade 2 0 -> Course  
+Grade 2 0 -> Course
 Group 7 4 -> Major, Student, AttendanceTracker  
 Major 5 6 -> Course, Student, Teacher  
 ScholarshipRecord 4 0  
@@ -43,7 +43,7 @@ ConflictChecker 0 1 -> ScheduleEntry, Location
 Location 3 2 -> Campus, Building, Room  
 Room 3 0 -> Building  
 Schedule 1 3 -> Location, Teacher, Course, Group, Subgroup  
-Semester 4 2 -> Schedule  
+Semester 4 2 -> Schedule
 Session 6 5 -> Group, Semester, Exam, Credit, Course, Student  
 Dean 5 0 -> Person, Faculty  
 DocumentSecretary 5 2 -> Person, Faculty, Document  
