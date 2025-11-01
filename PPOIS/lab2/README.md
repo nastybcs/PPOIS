@@ -43,8 +43,8 @@ ConflictChecker 0 1 -> ScheduleEntry, Location
 Location 3 2 -> Campus, Building, Room  
 Room 3 0 -> Building  
 Schedule 1 3 -> Location, Teacher, Course, Group, Subgroup  
-Semester 4 2 -> Schedule
-Session 6 5 -> Group, Semester, Exam, Credit, Course, Student  
+Semester 4 2 -> Schedule  
+Session 6 5 -> Group, Semester, Exam, Credit, Course, Student    
 Dean 5 0 -> Person, Faculty  
 DocumentSecretary 5 2 -> Person, Faculty, Document  
 EventSecretary 6 5 -> Person, Faculty, Event  
