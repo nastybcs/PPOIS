@@ -7,8 +7,7 @@ class IncidentEdgeIterator:
     def __init__(self, graph, vertex_id, reverse=False, const=False):
         self.graph = graph
         self.vertex_id = vertex_id
-        
-        # Храним пары (id1, id2) — норм
+
         edges = [(min(vertex_id, x), max(vertex_id, x)) for x in graph._adj[vertex_id]]
         if reverse:
             edges.reverse()
@@ -46,7 +45,6 @@ class IncidentEdgeIterator:
 
         first_id, second_id = self.edges[self.index - 1]
 
-        # В remove_edge должны идти именно Vertex
         v1 = self.graph._vertices[first_id]
         v2 = self.graph._vertices[second_id]
 
