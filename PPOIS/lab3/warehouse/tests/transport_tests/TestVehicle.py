@@ -15,7 +15,7 @@ class TestVehicle(unittest.TestCase):
     def setUp(self):
         self.warehouse = type("Warehouse", (), {"name": "Test Warehouse"})
         self.driver = Driver("Ivan", "Petrov", "Moscow", "ivan@petrov", self.warehouse, "A123BC")
-        self.vehicle = Vehicle("A123BC", "Ford Transit", VehicleType.VAN)
+        self.vehicle = Vehicle("A123BC", "Ford Transit", VehicleType.VAN, 1500)
 
 
     def test_init_sets_attributes_and_default_capacity(self):
