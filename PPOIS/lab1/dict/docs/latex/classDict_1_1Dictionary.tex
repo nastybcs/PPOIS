@@ -1,0 +1,218 @@
+\doxysection{Dict.\+Dictionary Class Reference}
+\hypertarget{classDict_1_1Dictionary}{}\label{classDict_1_1Dictionary}\index{Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_ad21bc2fb2c0fe3e032ee7238f03f6f49}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a5067be00ec5a7fc00bf80a605c18d75d}{append}} (self, word)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_abd5ed9758f32545b5b82cd75ac5da4c5}{\+\_\+\+\_\+iadd\+\_\+\+\_\+}} (self, other)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_aab418834f392d6f4a1a51fb0a15e2bcc}{show\+\_\+tree}} (self, node)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a3664b2fa1d41dff3e89c0331754e5dfc}{del\+\_\+node}} (self, word)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_ad0e632b84bf0484214bb2ab1658751e9}{\+\_\+\+\_\+isub\+\_\+\+\_\+}} (self, other)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a6176577d8d1fbb0a72c8a5b89938291c}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, key)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a7b2aeb6a72f88eb79e6ca2a2cf5f9b9c}{\+\_\+\+\_\+setitem\+\_\+\+\_\+}} (self, key, new\+\_\+rus)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a318225d0fcdba6e2b3fdd95ded63c1c5}{get\+\_\+size}} (self)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_ac0f1b201b1d9693af92c2e03497d3b2c}{readfromfile}} (self, filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a11cbea53f995403cc8f4144331a02803}{root}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a53023dc4349aace1ccaab696896bafb6}{\+\_\+size}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a4a1efc59d7c8725886967b7aa09921f8}{\+\_\+\+\_\+find}} (self, node, parent, eng)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a0f6d6b2dd293a935ac098ab63e7fbbf9}{\+\_\+\+\_\+del\+\_\+leaf}} (self, node, parent)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a73dbd08b934c649b7134110a7ce384fa}{\+\_\+\+\_\+del\+\_\+one\+\_\+child}} (self, node, parent)
+\item 
+\mbox{\hyperlink{classDict_1_1Dictionary_a58f9ab11fbdf203ec7171e6e58e65d01}{\+\_\+\+\_\+find\+\_\+min}} (self, node, parent)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Класс двоичного дерева поиска для англо-русского словаря.
+
+Поддерживает добавление, удаление, поиск слов, чтение из файла и отображение дерева.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDict_1_1Dictionary_ad21bc2fb2c0fe3e032ee7238f03f6f49}\label{classDict_1_1Dictionary_ad21bc2fb2c0fe3e032ee7238f03f6f49} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Конструктор словаря.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDict_1_1Dictionary_a0f6d6b2dd293a935ac098ab63e7fbbf9}\label{classDict_1_1Dictionary_a0f6d6b2dd293a935ac098ab63e7fbbf9} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_del\_leaf@{\_\_del\_leaf}}
+\index{\_\_del\_leaf@{\_\_del\_leaf}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_del\_leaf()}{\_\_del\_leaf()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+del\+\_\+leaf (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node,  }\item[{}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}@brief Удаляет лист (узел без потомков).
+@param node Удаляемый узел.
+@param parent Родитель удаляемого узла.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a73dbd08b934c649b7134110a7ce384fa}\label{classDict_1_1Dictionary_a73dbd08b934c649b7134110a7ce384fa} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_del\_one\_child@{\_\_del\_one\_child}}
+\index{\_\_del\_one\_child@{\_\_del\_one\_child}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_del\_one\_child()}{\_\_del\_one\_child()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+del\+\_\+one\+\_\+child (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node,  }\item[{}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}@brief Удаляет узел с одним потомком, сохраняя структуру дерева.
+@param node Удаляемый узел.
+@param parent Родитель удаляемого узла.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a4a1efc59d7c8725886967b7aa09921f8}\label{classDict_1_1Dictionary_a4a1efc59d7c8725886967b7aa09921f8} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_find@{\_\_find}}
+\index{\_\_find@{\_\_find}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_find()}{\_\_find()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+find (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node,  }\item[{}]{parent,  }\item[{}]{eng }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}@brief Рекурсивный поиск узла по английскому слову.
+@param node Текущий узел.
+@param parent Родитель текущего узла.
+@param eng Искомое английское слово.
+@return Кортеж (найденный узел, его родитель, флаг_найдено)
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a58f9ab11fbdf203ec7171e6e58e65d01}\label{classDict_1_1Dictionary_a58f9ab11fbdf203ec7171e6e58e65d01} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_find\_min@{\_\_find\_min}}
+\index{\_\_find\_min@{\_\_find\_min}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_find\_min()}{\_\_find\_min()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+find\+\_\+min (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node,  }\item[{}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyVerb}@brief Находит минимальный элемент в правом поддереве (для удаления узла с двумя потомками).
+@param node Корень поддерева.
+@param parent Родитель текущего узла.
+@return Кортеж (узел с минимальным ключом, его родитель)
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a6176577d8d1fbb0a72c8a5b89938291c}\label{classDict_1_1Dictionary_a6176577d8d1fbb0a72c8a5b89938291c} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Поиск перевода слова по ключу.
+@param key Английское слово.
+@return Русский перевод или None, если слово не найдено.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_abd5ed9758f32545b5b82cd75ac5da4c5}\label{classDict_1_1Dictionary_abd5ed9758f32545b5b82cd75ac5da4c5} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_iadd\_\_@{\_\_iadd\_\_}}
+\index{\_\_iadd\_\_@{\_\_iadd\_\_}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_iadd\_\_()}{\_\_iadd\_\_()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+iadd\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Оператор += для добавления нового слова.
+@param other Узел класса Node.
+@return Текущий словарь с добавленным словом.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_ad0e632b84bf0484214bb2ab1658751e9}\label{classDict_1_1Dictionary_ad0e632b84bf0484214bb2ab1658751e9} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_isub\_\_@{\_\_isub\_\_}}
+\index{\_\_isub\_\_@{\_\_isub\_\_}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_isub\_\_()}{\_\_isub\_\_()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+isub\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Оператор -= для удаления элемента из словаря.
+@param other Узел класса Node с ключом для удаления.
+@return Текущий словарь после удаления элемента.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a7b2aeb6a72f88eb79e6ca2a2cf5f9b9c}\label{classDict_1_1Dictionary_a7b2aeb6a72f88eb79e6ca2a2cf5f9b9c} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_\_setitem\_\_@{\_\_setitem\_\_}}
+\index{\_\_setitem\_\_@{\_\_setitem\_\_}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_\_setitem\_\_()}{\_\_setitem\_\_()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+\+\_\+setitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key,  }\item[{}]{new\+\_\+rus }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Изменяет перевод слова.
+@param key Английское слово.
+@param new_rus Новый перевод.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a5067be00ec5a7fc00bf80a605c18d75d}\label{classDict_1_1Dictionary_a5067be00ec5a7fc00bf80a605c18d75d} 
+\index{Dict.Dictionary@{Dict.Dictionary}!append@{append}}
+\index{append@{append}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+append (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{word }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Добавляет новый элемент в словарь.
+@param word Узел класса Node с парой (английское слово, перевод).
+@return Добавленный узел.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a3664b2fa1d41dff3e89c0331754e5dfc}\label{classDict_1_1Dictionary_a3664b2fa1d41dff3e89c0331754e5dfc} 
+\index{Dict.Dictionary@{Dict.Dictionary}!del\_node@{del\_node}}
+\index{del\_node@{del\_node}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{del\_node()}{del\_node()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+del\+\_\+node (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{word }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Удаляет элемент словаря по английскому слову.
+@param word Узел с английским словом для удаления.
+@return Удалённый узел или None, если слово не найдено.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_a318225d0fcdba6e2b3fdd95ded63c1c5}\label{classDict_1_1Dictionary_a318225d0fcdba6e2b3fdd95ded63c1c5} 
+\index{Dict.Dictionary@{Dict.Dictionary}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+get\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Возвращает количество элементов в словаре.
+@return Размер словаря.
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_ac0f1b201b1d9693af92c2e03497d3b2c}\label{classDict_1_1Dictionary_ac0f1b201b1d9693af92c2e03497d3b2c} 
+\index{Dict.Dictionary@{Dict.Dictionary}!readfromfile@{readfromfile}}
+\index{readfromfile@{readfromfile}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{readfromfile()}{readfromfile()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+readfromfile (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Загружает данные словаря из текстового файла.
+@param filename Имя файла с парами (eng, rus), разделёнными запятой.
+@note Формат строки в файле: "eng, rus"
+\end{DoxyVerb}
+ \Hypertarget{classDict_1_1Dictionary_aab418834f392d6f4a1a51fb0a15e2bcc}\label{classDict_1_1Dictionary_aab418834f392d6f4a1a51fb0a15e2bcc} 
+\index{Dict.Dictionary@{Dict.Dictionary}!show\_tree@{show\_tree}}
+\index{show\_tree@{show\_tree}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{show\_tree()}{show\_tree()}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+show\+\_\+tree (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{node }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Рекурсивный симметричный обход дерева с выводом словаря.
+@param node Текущий узел дерева.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classDict_1_1Dictionary_a53023dc4349aace1ccaab696896bafb6}\label{classDict_1_1Dictionary_a53023dc4349aace1ccaab696896bafb6} 
+\index{Dict.Dictionary@{Dict.Dictionary}!\_size@{\_size}}
+\index{\_size@{\_size}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classDict_1_1Dictionary_a11cbea53f995403cc8f4144331a02803}\label{classDict_1_1Dictionary_a11cbea53f995403cc8f4144331a02803} 
+\index{Dict.Dictionary@{Dict.Dictionary}!root@{root}}
+\index{root@{root}!Dict.Dictionary@{Dict.Dictionary}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily Dict.\+Dictionary.\+root}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Dict_8py}{Dict.\+py}}\end{DoxyCompactItemize}
