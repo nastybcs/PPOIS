@@ -1,4 +1,5 @@
 class SelectionSort:
+    @staticmethod
     def selection_sort(arr, key= None):
         arr = arr[:]
         n = len(arr)
