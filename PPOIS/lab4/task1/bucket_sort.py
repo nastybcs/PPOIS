@@ -1,6 +1,5 @@
 from task1.selection_sort import SelectionSort
 class BucketSort: 
-    @staticmethod
     def bucket_sort (data, key=None, bucket_counts = 10):
         arr = list(data)
         if len(arr) <= 1:
