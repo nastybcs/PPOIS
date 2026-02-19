@@ -1,0 +1,2 @@
+class CrewMemberNotFoundError(Exception):
+    pass
